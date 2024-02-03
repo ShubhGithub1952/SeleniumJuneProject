@@ -45,15 +45,16 @@ public class ReadDataFromExcelFileandRunTest {
 		driver.switchTo().alert().accept();
 		
 		//Verify with the URl that contains the Paramters has been Passed to this method
-		String expectedURL=CompanyName;
+		String expectedURL=emailid;
 		String actualURL = driver.getCurrentUrl();
 		wait.until(ExpectedConditions.urlContains(actualURL));
-		Thread.sleep(3000);
-		if (actualURL.contains(expectedURL)) {
+		Thread.sleep(4000);
+		if (expectedURL.contains(actualURL)) {
 			System.out.println("Test Case Pass :- Data has been read from Excel");
 		}else {
 			System.out.println("Test Case Fail :- Data not been read from Excel");
 		}
+		//Assert.assertEquals(expectedURL, actualURL);
 		
 		//Quite the Browser
 		driver.quit();
@@ -75,11 +76,11 @@ public class ReadDataFromExcelFileandRunTest {
 	@DataProvider
 	public Object[][] dataDrivenMethod() throws Throwable{
 		Object[][] dataObject = new Object[1][5];
-		dataObject[0][0]=getDataFromExcleMethodTest(1, 1);
-		dataObject[0][1]=getDataFromExcleMethodTest(1, 2);
-		dataObject[0][2]=getDataFromExcleMethodTest(1, 3);
-		dataObject[0][3]=getDataFromExcleMethodTest(1, 4);
-		dataObject[0][4]=getDataFromExcleMethodTest(1, 5);
+		dataObject[0][0]=getDataFromExcleMethodTest(4, 1);
+		dataObject[0][1]=getDataFromExcleMethodTest(4, 2);
+		dataObject[0][2]=getDataFromExcleMethodTest(4, 3);
+		dataObject[0][3]=getDataFromExcleMethodTest(4, 4);
+		dataObject[0][4]=getDataFromExcleMethodTest(4, 5);
 		return dataObject;
 	}
 }

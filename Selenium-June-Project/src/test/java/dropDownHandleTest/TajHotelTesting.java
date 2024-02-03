@@ -57,8 +57,7 @@ public class TajHotelTesting {
 		}
 		//expliciteWait.until(ExpectedConditions.urlContains("https://www.tajhotels.com/"));
 		
-		System.out.println(popularLocationListName);
-		
+		System.out.println(popularLocationListName);					
 		driver.switchTo().newWindow(WindowType.TAB);
 		driver.get("https://www.tajhotels.com/");
 		ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());

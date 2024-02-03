@@ -7,6 +7,7 @@ import java.util.Properties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
@@ -31,7 +32,6 @@ public class LaunchTajWebPageByReadingDataFromPropertiesFileTest {
 		String username = properties.getProperty("username");
 		String password = properties.getProperty("password");
 		System.out.println(URL+" "+username+" "+password);
-		
 		driver.get(URL);
 		driver.findElement(By.xpath("//a[text()='Sign in']")).click();
 		driver.findElement(By.id("phoneInputLogin-phone")).sendKeys(username);

@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="readDataFromProperties.LaunchTajWebPageByReadingDataFromPropertiesFileTest">
+      <class name="takeScreenShot.TakeScreenshotOfGoibiboTest">
         <methods>
-          <include name="readDataFromPropertiesFileMethodTest"/>
+          <include name="takeScreenshotMethodTest"/>
         </methods>
-      </class> <!-- readDataFromProperties.LaunchTajWebPageByReadingDataFromPropertiesFileTest -->
+      </class> <!-- takeScreenShot.TakeScreenshotOfGoibiboTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
